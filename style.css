@@ -53,7 +53,6 @@ body{
     transition: .5s;
 }
 
-/* Estilos para el carrusel */
 header{
     color: white;
     height: 5rem;
@@ -62,11 +61,10 @@ header{
     align-items: center;
     justify-content: center;
 }
-/*Estilos main*/
 main{
+    heigth:100vh;
     margin: 3em 5em 3em 5em;
 }
-/* Estilos para los formularios */
 .forms {
     display: flex;
     justify-content: space-between;
@@ -90,7 +88,6 @@ main{
     margin-bottom: 5px;
     margin-left: 2em;
 }
-/*Estilos para tabla de datos*/
 table {
     border-collapse: collapse;
     width: 100%;
@@ -107,7 +104,6 @@ th {
 table caption{
     margin: 2em 0em 1em 0em;
 }
-/* Estilos para las tarjetas de productos */
 .product-cards {
     margin: 5em 0 5em 0;
     display: flex;
@@ -160,7 +156,6 @@ table caption{
 .details-product img{
     height: 20rem;
 }
-/*Estilos para el form*/
 .form-main {
     max-width: 400px;
     margin: 0 auto;
@@ -196,8 +191,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #dddddd;
 }
-/* Estilos para el footer */
 footer {
+    mairgin-top:5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
