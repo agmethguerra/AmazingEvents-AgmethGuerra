@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazing Events</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <img src="./amazing_brand.png" alt="logo">
+            <div class="module-list">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./futureevents.html">Upcoming Events</a></li>
+                    <li><a href="./pastevents.html">Past Events</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./statics.html">Stats</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header class="carousel">
+            <h2>Past Events</h2>
+        </header>
+    </div>
+    <main>
+        <div class="forms">
+            <form>
+                <ul class="checklist">
+                    <li>
+                        <input type="checkbox" id="categoria1" name="categoria" value="categoria1">
+                        <label for="categoria1">Food Fair</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="categoria2" name="categoria" value="categoria2">
+                        <label for="categoria2">Museum</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="categoria3" name="categoria" value="categoria3">
+                        <label for="categoria3">Costume Party</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="categoria4" name="categoria" value="categoria4">
+                        <label for="categoria4">Music Concert</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="categoria5" name="categoria" value="categoria5">
+                        <label for="categoria5">Race</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="categoria6" name="categoria" value="categoria6">
+                        <label for="categoria6">Book Exchange</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="categoria7" name="categoria" value="categoria7">
+                        <label for="categoria7">Let's go to the cinema</label>
+                    </li>
+                </ul>
+            </form>
+            <form>
+                <input type="text" name="search" placeholder="Buscar...">
+            </form>
+        </div>
+        <div class="product-cards">
+            <div class="card" data-category="categoria1">
+                <img src="./food_fair.jpg" alt="Producto 1">
+                <h3>Festival of the collectivities</h3>
+                <p>Enjoy your favorite dishes from different countries in a unique event for the whole family.</p>
+                <p>Price: $5</p>
+                <a href="./details.html?id=1">Details</a>
+            </div>
+            <div class="card" data-category="categoria2">
+                <img src="./outing_to_the_museum.jpg" alt="Producto 2">
+                <h3>Art Exhibition</h3>
+                <p>Let's go to the art museum for an incredible tour to learn about the largest dinosaurs.</p>
+                <p>Price: $15</p>
+                <a href="./details.html?id=2">Details</a>
+            </div>
+            <div class="card" data-category="categoria5">
+                <img src="./marathon.jpg" alt="Producto 5">
+                <h3>10k for life</h3>
+                <p>Come and exercise, improve your health and lifestyle.</p>
+                <p>Price: $3</p>
+                <a href="./details.html?id=5">Details</a>
+            </div>
+            <div class="card" data-category="categoria6">
+                <img src="./books.jpg" alt="Producto 6">
+                <h3>School book Fair</h3>
+                <p>Bring your unused school book and bring the one you need.</p>
+                <p>Price: $1</p>
+                <a href="./details.html?id=6">Details</a>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com"><img src="./facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com"><img src="./instagram.png" alt="Instagram"></a>
+            <a href="https://web.whatsapp.com/"><img src="./whatsapp.png" alt="Whatsapp"></a>
+        </div>
+        <h1>COHORT 49</h1>
+    </footer>
+    <script>
+        var checkboxes = document.querySelectorAll('input[name="categoria"]');
+        var productCards = document.querySelectorAll('.card');
+
+        function filterProducts() {
+            var selectedCategories = Array.from(checkboxes)
+                .filter(function (checkbox) {
+                    return checkbox.checked;
+                })
+                .map(function (checkbox) {
+                    return checkbox.value;
+                });
+
+            for (var i = 0; i < productCards.length; i++) {
+                var card = productCards[i];
+                var category = card.getAttribute('data-category');
+
+                if (selectedCategories.length === 0 || selectedCategories.includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        }
+
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', filterProducts);
+        });
+
+    </script>
+</body>
+
+</html>

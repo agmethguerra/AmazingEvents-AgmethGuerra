@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazing Events</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <img src="./amazing_brand.png" alt="logo">
+            <div class="module-list">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./futureevents.html">Upcoming Events</a></li>
+                    <li><a href="./pastevents.html">Past Events</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./statics.html">Stats</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header class="carousel">
+            <h2>Stats</h2>
+        </header>
+    </div>
+    <main>
+        <section>
+
+            <table>
+                <caption>Upcoming Events</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Place</th>
+                        <th>Capacity</th>
+                        <th>Attendance</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>Halloween Night</td>
+                        <td>2024-02-12</td>
+                        <td>Come in your scariest costume character to win amazing prizes.</td>
+                        <td>Room C</td>
+                        <td>12,000</td>
+                        <td>9,000</td>
+                        <td>$12</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Metallica in concert</td>
+                        <td>2024-01-22</td>
+                        <td>The only concert of the most emblematic band in the world.</td>
+                        <td>Room A</td>
+                        <td>138,000</td>
+                        <td>138,000</td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Avengers</td>
+                        <td>2023-10-15</td>
+                        <td>Marvel's Avengers 3D premiere, the start of an epic saga with your best superheroes.</td>
+                        <td>Room D1</td>
+                        <td>9,000</td>
+                        <td>9,000</td>
+                        <td>$250</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <caption>Past Events</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Place</th>
+                        <th>Capacity</th>
+                        <th>Attendance</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Festival of the Collectivities</td>
+                        <td>2022-12-12</td>
+                        <td>Enjoy your favorite dishes from different countries in a unique event for the whole family.
+                        </td>
+                        <td>Room A</td>
+                        <td>45,000</td>
+                        <td>42,756</td>
+                        <td>$5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Art Exhibition</td>
+                        <td>2022-11-02</td>
+                        <td>Let's go to the art museum for an incredible tour to learn about the largest dinosaurs.</td>
+                        <td>Field</td>
+                        <td>82,000</td>
+                        <td>65,892</td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>10K for life</td>
+                        <td>2022-03-01</td>
+                        <td>Come and exercise, improve your health and lifestyle.</td>
+                        <td>Soccer Field</td>
+                        <td>30,000</td>
+                        <td>25,698</td>
+                        <td>$3</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>School Book Fair</td>
+                        <td>2022-10-15</td>
+                        <td>Bring your unused school book and bring the one you need.</td>
+                        <td>Room D1</td>
+                        <td>150,000</td>
+                        <td>123,286</td>
+                        <td>$1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com"><img src="./facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com"><img src="./instagram.png" alt="Instagram"></a>
+            <a href="https://web.whatsapp.com/"><img src="./whatsapp.png" alt="Whatsapp"></a>
+        </div>
+        <h1>COHORT 49</h1>
+    </footer>
+    <script>
+        var slideIndex = 0;
+        showSlide(slideIndex);
+
+        function changeSlide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function showSlide(n) {
+            var slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) {
+                slideIndex = 0;
+            } else if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "flex";
+        }
+
+        var moduleList = document.querySelector('.module-list ul');
+        var moduleItems = moduleList.getElementsByTagName('li');
+
+        for (var i = 0; i < moduleItems.length; i++) {
+            moduleItems[i].addEventListener('click', function () {
+                var current = moduleList.getElementsByClassName('active');
+                current[0].className = current[0].className.replace(' active', '');
+                this.className += ' active';
+            });
+        }
+        s
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazing Events</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <img src="./amazing_brand.png" alt="logo">
+            <div class="module-list">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./futureevents.html">Upcoming Events</a></li>
+                    <li><a href="./pastevents.html">Past Events</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./statics.html">Stats</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header class="carousel">
+            <h2>Contact</h2>
+        </header>
+    </div>
+    <main>
+        <div class="product-cards">
+            <form class="form-main" action="procesar.php" method="POST">
+                <label for="nombre">Name:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">E-mail:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mensaje">Menssage:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com"><img src="./facebook.png" alt="Facebook"></a>
+            <a href="https://instagram.com"><img src="./instagram.png" alt="Instagram"></a>
+            <a href="https://web.whatsapp.com/"><img src="./whatsapp.png" alt="Whatsapp"></a>
+        </div>
+        <h1>COHORT 49</h1>
+    </footer>
+    <script>
+        var slideIndex = 0;
+        showSlide(slideIndex);
+
+        function changeSlide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function showSlide(n) {
+            var slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) {
+                slideIndex = 0;
+            } else if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "flex";
+        }
+
+        var moduleList = document.querySelector('.module-list ul');
+        var moduleItems = moduleList.getElementsByTagName('li');
+
+        for (var i = 0; i < moduleItems.length; i++) {
+            moduleItems[i].addEventListener('click', function () {
+                var current = moduleList.getElementsByClassName('active');
+                current[0].className = current[0].className.replace(' active', '');
+                this.className += ' active';
+            });
+        }
+        s
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow-x: hidden;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dddddd;
+    padding: 10px;
+}
+.navbar img{
+    height: 3rem;
+}
+
+.module-list ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.module-list ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+.module-list ul li a{
+    display: flex;
+    flex-direction: row;
+    background-color: #cccc;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-decoration: none;
+}
+.module-list ul li a:hover{
+    background-color: #a5a5a5cc;
+    transition: .5s;
+}
+
+/* Estilos para el carrusel */
+header{
+    color: white;
+    height: 5rem;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Estilos main*/
+main{
+    margin: 3em 5em 3em 5em;
+}
+/* Estilos para los formularios */
+.forms {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.forms form{
+    height: 10px;
+}
+.checklist {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+.checklist li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 2em;
+}
+/*Estilos para tabla de datos*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+table caption{
+    margin: 2em 0em 1em 0em;
+}
+/* Estilos para las tarjetas de productos */
+.product-cards {
+    margin: 5em 0 5em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 300px;
+    height: 370px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: #fff;
+    width: 300px;
+}
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+.card a {
+    display: flex;
+    background-color: #cccc;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.card a:hover{
+    background-color: #a5a5a5cc;
+    transition: .5s;
+}
+.details-product{
+    background-color: #eeeeee;
+    display: flex;
+}
+.details-product img{
+    height: 20rem;
+}
+/*Estilos para el form*/
+.form-main {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #d9d9d9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: #dddddd;
+}
+/* Estilos para el footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dddddd;
+    padding: 10px;
+    bottom: 0%;
+    color: white;
+}
+
+.social-media img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #dddddd;
+        padding: 10px;
+    }
+    .forms{
+        display: flex;
+        flex-direction: column;
+    }
+    .product-cards .card{
+        display: flex;
+        width: 300px;
+    }
+    .card {
+      width: 100%;
+      height: auto;
+    }
+  
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .card h3 {
+      font-size: 16px;
+    }
+  
+    .card p {
+      font-size: 14px;
+    }
+  
+    .card a {
+      font-size: 14px;
+    }
+  }
+  
